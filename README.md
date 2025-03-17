@@ -16,7 +16,11 @@ The data used in our work are from [ADNI](https://adni.loni.usc.edu/) and [ABIDE
 * torch-scatter~=2.0.9
 * torch-sparse~=0.6.13
 * torch-spline-conv~=1.2.1
-## III. Citation：
+
+## III. Training:
+python main.py
+
+## IV. Citation：
 If our paper or code is helpful to you, please cite our paper. If you have any questions, please feel free to ask me.
 ```
 @article{li2025mhnet,
