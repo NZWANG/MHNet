@@ -1,6 +1,5 @@
 """
 Author:YueYang Li
-Data:2023/12/20
 """
 import torch
 import torch.nn as nn
@@ -31,9 +30,6 @@ def upper_triangle_concat(matrix):
 
 
 "C-Stream"
-"""
-VGG不用了 用这个类 
-"""
 class MatrixToFeature(nn.Module):
     def __init__(self):
         super(MatrixToFeature, self).__init__()
@@ -195,18 +191,6 @@ class ChebNet_WAN(nn.Module):
 
         return graph_embedding
 
-# data = torch.load(r"C:\PycharmProject_Lib\My_Code_2023\LYY-GNN\datasets\abide\abide_nyu\Raw_RV_WAN_Feature_NYU.pt")[0]
-# x = data.x.float()
-# edge_index = data.edge_index
-# edge_attr = data.edge_attr.float()
-# data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr)
-# model = ChebNet_WAN()
-# print(model)
-# print(model(data).shape)
-# output = model(data)
-# print(output)
-# print("")
-
 "ChebNet_MAN"
 class ChebNet_MAN(nn.Module):
     def __init__(self):
@@ -252,19 +236,6 @@ class ChebNet_MAN(nn.Module):
         graph_embedding = self.fc1(x)
 
         return graph_embedding
-# data = torch.load(r"C:\PycharmProject_Lib\My_Code_2023\LYY-GNN\datasets\abide\abide_nyu\Raw_RV_MAN_Feature_NYU.pt")[0]
-# x = data.x.float()
-# edge_index = data.edge_index
-# edge_attr = data.edge_attr.float()
-# data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr)
-# model = ChebNet_MAN()
-# print(model)
-# print(model(data).shape)
-# output = model(data)
-# print(output)
-# print("")
-
-
 
 class ChebNet(nn.Module):
     def __init__(self):
@@ -323,8 +294,6 @@ class ChebNet(nn.Module):
 
         return graph_embedding
 
-
-
 "Second_Order_Pooling"
 def second_order_pooling(x):
     # 计算二阶关系
@@ -339,7 +308,6 @@ def second_order_pooling(x):
     return pooled_output
 
 "Concat Function"
-# 定义一个函数，功能是把graph_embedding、VGG_embedding、second_graph_embedding、second_VGG_embedding进行拼接
 def concat(embedding1, embedding2, embedding3, embedding4):
     # 把graph_embedding、VGG_embedding、second_graph_embedding、second_VGG_embedding进行拼接
     concat_embedding = torch.cat((embedding1, embedding2, embedding3, embedding4), 1)
