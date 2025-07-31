@@ -4,7 +4,7 @@ This repo is the official implementation of [Multi-View Higher-Order Neural Netw
 ## I. Usage:
 MHNet is a dual-branch deep learning framework that analyzes rs-fMRI data to diagnose neurodevelopmental disorders like ASD and ADHD. It uniquely extracts both Euclidean features (local and high-order) and non-Euclidean features (topological and high-order) from multi-view brain functional networks. Experiments across three public datasets demonstrate MHNet outperforms existing methods, offering improved diagnostic capability and insights into brain region associations with neurodevelopmental disorders.
 
-The data used in our work are from [ADNI](https://adni.loni.usc.edu/) and [ABIDE](http://preprocessed-connectomes-project.org/abide/). Please follow the relevant regulations to download from the websites.
+The data used in our work are from [ADHD-200][(https://adni.loni.usc.edu/)](https://fcon_1000.projects.nitrc.org/indi/adhd200/). and [ABIDE](http://preprocessed-connectomes-project.org/abide/). Please follow the relevant regulations to download from the websites.
 
 ## II. Requirements:
 * numpy~=1.26.2
